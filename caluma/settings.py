@@ -1,9 +1,17 @@
 import os
 import re
+import sys
 
 import environ
 from django.conf import global_settings
 from promise import async_instance
+
+if hasattr(sys, "pypy_version_info"):  # pragma: no cover
+    # in pypy, override psycopg2 with cffi version
+    from psycopg2cffi import compat
+
+    compat.register()
+
 
 env = environ.Env()
 django_root = environ.Path(__file__) - 2
