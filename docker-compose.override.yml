@@ -7,6 +7,7 @@ services:
       - "${DATABASE_PORT:-5432}:${DATABASE_PORT:-5432}"
   caluma:
     build:
+      dockerfile: pypy/Dockerfile
       context: .
       args:
         REQUIREMENTS: requirements-dev.txt
