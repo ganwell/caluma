@@ -18,8 +18,8 @@ Files:
     docker-compose.yml
     manage.py
     renovate.json
-    requirements-dev.txt
-    requirements.txt
+    *requirements-dev.txt
+    *requirements.txt
     setup.cfg
     setup.py
     uwsgi.ini
