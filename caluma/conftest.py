@@ -70,6 +70,7 @@ def info(anonymous_request):
         None,
         None,
         None,
+        path=None,
         schema=None,
         fragments=None,
         root_value=None,
