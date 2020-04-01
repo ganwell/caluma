@@ -243,7 +243,7 @@ def test_data_sources_stores_user(
         }
     }
     assert not DynamicOption.objects.exists()
-    result = schema_executor(query, variables=variables, info=info)
+    result = schema_executor(query, variables=variables)
     assert not result.errors
     assert DynamicOption.objects.filter(
         document=document,
