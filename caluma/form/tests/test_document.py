@@ -97,7 +97,7 @@ def test_query_all_documents(
         }
     """
 
-    search = isinstance(answer.value, list) and " ".join(answer.value) or answer.value
+    search = isinstance(answer.value, list) and " ".join(answer.value) or str(answer.value)
 
     if question.type == Question.TYPE_FILE:
         if answer.value == "some-other-file.pdf":
