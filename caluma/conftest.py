@@ -107,7 +107,7 @@ def simple_history_middleware(next, root, info, **args):
 def schema_executor(anonymous_request):
     return functools.partial(
         schema.execute,
-        context=anonymous_request,
+        context_value=anonymous_request,
         middleware=[simple_history_middleware],
     )
 
